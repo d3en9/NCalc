@@ -568,6 +568,7 @@ namespace NCalc.Tests
         public void ShouldHandleLongValues()
         {
             Assert.AreEqual(40000000000 + 1f, new Expression("40000000000+1").Evaluate());
+            Assert.AreNotEqual(2707000213+1d, new Expression("2707000217+0").Evaluate());
         }
 
         [TestMethod]
